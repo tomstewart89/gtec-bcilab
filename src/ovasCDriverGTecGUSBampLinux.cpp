@@ -29,7 +29,7 @@ CDriverGTecGUSBampLinux::CDriverGTecGUSBampLinux(IDriverContext& rDriverContext)
 
     m_oConfig.ao_config = &m_oAnalogOutConfig;
 
-    // Configure some defaults for the amplifier so the user can just click connect/play when the server opens
+    // Configure some defaults so the settings are reasonable as soon as the driver loads and the user can tweak them from there
 
     // Configure the analog waveform to be created by the internal signal generator
     m_oAnalogOutConfig.shape = GT_ANALOGOUT_SINE;
@@ -117,12 +117,12 @@ CDriverGTecGUSBampLinux::CDriverGTecGUSBampLinux(IDriverContext& rDriverContext)
         l_oBandpassConfigName << "Bandpass" << i;
         l_oNotchConfigName << "Notch" << i;
         l_oBipolarConfigName << "Bipolar" << i;
-        m_oSettings.add(l_oBandpassConfigName.str().c_str(), (bool*)&m_oConfig.bandpass[i]);
-        m_oSettings.add(l_oNotchConfigName.str().c_str(), (bool*)&m_oConfig.notch[i]);
-        m_oSettings.add(l_oBipolarConfigName.str().c_str(), (bool*)&m_oConfig.bipolar[i]);
+        m_oSettings.add(l_oBandpassConfigName.str().c_str(), (int*)&m_oConfig.bandpass[i]);
+        m_oSettings.add(l_oNotchConfigName.str().c_str(), (int*)&m_oConfig.notch[i]);
+        m_oSettings.add(l_oBipolarConfigName.str().c_str(), (int*)&m_oConfig.bipolar[i]);
     }
 
-    m_oSettings.load();
+    m_oSettings.load();   
 }
 
 CDriverGTecGUSBampLinux::~CDriverGTecGUSBampLinux(void)

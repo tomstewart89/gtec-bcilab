@@ -1,4 +1,4 @@
-#if defined TARGET_HAS_ThirdPartyGUSBampCAPI_Linux
+//#if defined TARGET_HAS_ThirdPartyGUSBampCAPI_Linux
 
 #include "ovasCConfigurationGTecGUSBampLinux.h"
 
@@ -89,15 +89,6 @@ boolean CConfigurationGTecGUSBampLinux::preConfigure(void)
 
     GT_FreeDeviceList(l_pDeviceList,l_ui32ListSize);
 
-    // If any devices were found at all, set the combo box to the first one listed
-    if(l_ui32ListSize)
-    {
-        gtk_combo_box_set_active(l_pComboBox, 0);
-    }
-
-    // This'll update the filter combo boxes
-    OnComboboxSamplingFrequencyChanged();
-
     // Connect all the callbacks
     g_signal_connect(gtk_builder_get_object(m_pBuilderConfigureInterface, "button_apply_bipolar"), "pressed", G_CALLBACK(button_apply_bipolar_pressed_cb), this);
     g_signal_connect(gtk_builder_get_object(m_pBuilderConfigureInterface, "button_apply_bandpass"), "pressed", G_CALLBACK(button_apply_bandpass_pressed_cb), this);
@@ -121,6 +112,27 @@ boolean CConfigurationGTecGUSBampLinux::preConfigure(void)
     gtk_tree_selection_set_mode(l_pSelection, GTK_SELECTION_MULTIPLE);
 
     // Now apply all the configs recovered from the settings helper to the GUI - don't have to worry about the sampling rate and number of channels though since they're already taken care of
+
+    // First look through all the device names returned from the API. If any match the one recovered from the settings manager set that as active
+    GtkTreeModel* l_pTreeModelName = gtk_combo_box_get_model(l_pComboBox);
+    GtkTreeIter l_oIterName;
+    for(gboolean l_bEnd = gtk_tree_model_get_iter_first(l_pTreeModelName, &l_oIterName); l_bEnd; l_bEnd = gtk_tree_model_iter_next(l_pTreeModelName, &l_oIterName))
+    {
+        gchar *l_oFilterDesc;
+        gtk_tree_model_get(l_pTreeModelName, &l_oIterName, 0, &l_oFilterDesc, -1);
+
+        // If the name in the combo box matches the one passed in then make that entry active
+        if(*m_pDeviceName == l_oFilterDesc)
+        {
+            gtk_combo_box_set_active_iter (l_pComboBox, &l_oIterName);
+        }
+
+        // Free the string now that we're finished with it
+        g_free(l_oFilterDesc);
+    }
+
+    // And since we might have changed to a valid device name, let's update the filter combo boxes
+    OnComboboxSamplingFrequencyChanged();
 
     // Fill out the analog output configs
     // Shape
@@ -167,26 +179,55 @@ boolean CConfigurationGTecGUSBampLinux::preConfigure(void)
         gtk_toggle_button_set_active(l_pCheckButtonRef, m_pConfig->common_reference[i]);
     }
 
-    /*
     // Config each channel with the info
-    GtkTreeView* l_pTreeView = GTK_TREE_VIEW(gtk_builder_get_object(m_pBuilderConfigureInterface,"treeview_channel_config"));
-    GtkTreeModel* l_pTreeModel = gtk_tree_view_get_model(l_pTreeView);
-    gint l_ui32Value;
-
-    GtkTreeIter l_oIter;
+    GtkListStore* l_pListStore = GTK_LIST_STORE(gtk_builder_get_object(m_pBuilderConfigureInterface,"model_channel_config"));
     int i = 0;
-    for(gboolean l_bEnd = gtk_tree_model_get_iter_first(l_pTreeModel, &l_oIter); l_bEnd; l_bEnd = gtk_tree_model_iter_next(l_pTreeModel, &l_oIter), i++)
+
+    GtkTreeModel* l_pTreeModelChannel = gtk_tree_view_get_model(l_pTreeView);
+    GtkTreeIter l_oIterChannel;
+    for(gboolean l_bEnd = gtk_tree_model_get_iter_first(l_pTreeModelChannel, &l_oIterChannel); l_bEnd; l_bEnd = gtk_tree_model_iter_next(l_pTreeModelChannel, &l_oIterChannel), i++)
     {
-        gtk_tree_model_get(l_pTreeModel, &l_oIter, BipolarColumn, &l_ui32Value,-1);
-        m_pConfig->bipolar[i] = (l_ui32Value == 0? GT_BIPOLAR_DERIVATION_NONE : l_ui32Value);
+        // Look through each value in the bandpass model and if there's one that has an id that matches, set it's text to the channel configs
+        GtkTreeModel* l_pTreeModelBandpass = GTK_TREE_MODEL(gtk_builder_get_object(m_pBuilderConfigureInterface,"model_bandpass"));
+        GtkTreeIter l_oIterBandpass;
+        for(gboolean l_bEnd = gtk_tree_model_get_iter_first(l_pTreeModelBandpass, &l_oIterBandpass); l_bEnd; l_bEnd = gtk_tree_model_iter_next(l_pTreeModelBandpass, &l_oIterBandpass))
+        {
+            gchar *l_oFilterDesc;
+            gint l_oFilterID;
+            gtk_tree_model_get(l_pTreeModelBandpass, &l_oIterBandpass, 0, &l_oFilterDesc, 1, &l_oFilterID, -1);
 
-        gtk_tree_model_get(l_pTreeModel, &l_oIter, NotchIdColumn, &l_ui32Value, -1);
-        m_pConfig->notch[i] = l_ui32Value;
+            // If the id is the same as the one in the config, we've found the filter that was set last time
+            if(l_oFilterID == m_pConfig->bandpass[i])
+            {
+                gtk_list_store_set(l_pListStore, &l_oIterChannel, BandpassColumn, l_oFilterDesc, BandpassIdColumn, l_oFilterID, -1);
+            }
 
-        gtk_tree_model_get(l_pTreeModel, &l_oIter, BandpassIdColumn, &l_ui32Value, -1);
-        m_pConfig->bandpass[i] = l_ui32Value;
+            // Free the string now that we're finished with it
+            g_free(l_oFilterDesc);
+        }
+
+        // Look through each value in the notch model and if there's one that has an id that matches, set it's text to the channel configs
+        GtkTreeModel* l_pTreeModelNotch = GTK_TREE_MODEL(gtk_builder_get_object(m_pBuilderConfigureInterface,"model_notch"));
+        GtkTreeIter l_oIterNotch;
+        for(gboolean l_bEnd = gtk_tree_model_get_iter_first(l_pTreeModelNotch, &l_oIterNotch); l_bEnd; l_bEnd = gtk_tree_model_iter_next(l_pTreeModelNotch, &l_oIterNotch))
+        {
+            gchar *l_oFilterDesc;
+            gint l_oFilterID;
+            gtk_tree_model_get(l_pTreeModelNotch, &l_oIterNotch, 0, &l_oFilterDesc, 1, &l_oFilterID, -1);
+
+            // If the id is the same as the one in the config, we've found the filter that was set last time
+            if(l_oFilterID == m_pConfig->notch[i])
+            {
+                gtk_list_store_set(l_pListStore, &l_oIterChannel, NotchColumn, l_oFilterDesc, NotchIdColumn, l_oFilterID, -1);
+            }
+
+            // Free the string now that we're finished with it
+            g_free(l_oFilterDesc);
+        }
+
+        // And just straight out set the bipolar channel config
+        gtk_list_store_set(l_pListStore, &l_oIterChannel, BipolarColumn,  (gint)(m_pConfig->bipolar[i] == GT_BIPOLAR_DERIVATION_NONE? 0 : m_pConfig->bipolar[i]),-1);
     }
-    */
 
     return true;
 }
@@ -537,4 +578,4 @@ boolean CConfigurationGTecGUSBampLinux::postConfigure(void)
     return true;
 }
 
-#endif // TARGET_HAS_ThirdPartyGUSBampCAPI_Linux
+//#endif // TARGET_HAS_ThirdPartyGUSBampCAPI_Linux
