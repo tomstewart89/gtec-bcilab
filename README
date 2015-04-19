@@ -22,18 +22,23 @@ SOFTWARE.
 
 Acknowledgements:
 
-This driver was written by Tom Stewart under the supervision of Dr. Tomasz Rutkowski in the University of Tsukuba's BCI Laboratory http://about.bci-lab.info/
+This driver was written by Tom Stewart under the supervision of 
+Dr. Tomasz Rutkowski in the University of Tsukuba's BCI Laboratory 
+http://about.bci-lab.info/
 
 Installation:
 
-The driver was developed using gtec's Linux C API 1.14.02. For it work properly, the install.sh supplied with the gtec API needs to have been run which should have created the following files:
+The driver was developed using gtec's Linux C API 1.14.02. For it work properly,
+the install.sh supplied with the gtec API needs to have been run which should
+have created the following files:
 
 /usr/lib/libgusbampapiso.so.1.14.02
 /usr/include/gAPI.h
 /etc/gtec/filter_files/DSPfilter.bin
 /etc/gtec/filter_files/DSPNotchfilter.bin
 
-To access the USB without being root, you'll need to add yourself to the plugdev group and write a udev rule. 
+To access the USB without being root, you'll need to add yourself to the
+plugdev group and write a udev rule. 
 
 To do that, first check if there is a plugdev group:
 
@@ -63,7 +68,8 @@ Now paste the following line into editor:
 
 ATTRS{idProduct}=="0001", ATTRS{idVendor}=="153c", MODE="666", GROUP="plugdev"
 
-The values for idProduct and idVendor should match the ones that show up just after you've plugged in your amplifier and executed:
+The values for idProduct and idVendor should match the ones that show up just 
+after you've plugged in your amplifier and executed:
 
 $ dmesg
 
