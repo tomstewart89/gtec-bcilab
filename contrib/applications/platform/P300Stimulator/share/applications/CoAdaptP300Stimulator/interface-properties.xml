@@ -1,0 +1,34 @@
+<ExternelP300Stimulator>
+	<!-- can be Cal, Cop or Fr, value is expanded and specified in P300AcquisitionConfig.conf -->
+	<Mode>${CoAdaptP300_AcquisitionMode}</Mode> 
+	<!-- can be Replay or Online, value is expanded and specified in P300AcquisitionConfig.conf -->
+	<StimulatorMode>${CoAdaptP300_StimulatorMode}</StimulatorMode> 
+	<!-- specifies the keyboard layout file, value is expanded and specified in P300AcquisitionConfig.conf -->
+	<SymbolDefinitionFile>${CoAdaptP300_KeyboardLayout}</SymbolDefinitionFile>
+	<!-- specifies the property file containing the stimulator properties/timings -->
+	<StimulatorConfigFile>${Path_Data}/applications/CoAdaptP300Stimulator/stimulator-properties.xml</StimulatorConfigFile>
+	<!--AdditionalConfigurationFile>/P300AcquisitionConfig.conf</AdditionalConfigurationFile -->
+	<!-- the file name where the stimulator will save the symbols that are flashed during the experiment, value is expanded and specified in P300AcquisitionConfig.conf -->
+	<FlashGroupDefinitionFile>${CoAdaptP300_FlashGroupDefinitionFile}</FlashGroupDefinitionFile>
+	<!-- The name of the database used by Presage for word prediction -->
+	<NGramDatabase>openvibe/applications/CoAdaptP300Stimulator/fr.db</NGramDatabase>
+	<!-- width and height of the window, full screen or nofull screen-->
+	<Screen index="${CoAdaptP300_MonitorIndex}" width="${CoAdaptP300_MonitorWidth}" height="${CoAdaptP300_MonitorHeight}">nofull</Screen>
+	<!-- riprand or rowcol -->
+	<FlashMode>${CoAdaptP300_FlashMode}</FlashMode>
+	<!-- specifies where the feedback is presented in free mode -->
+	<!-- central: feedback is presented in the center of the screen, color: if the symbol in the keyboard itself is highlighted -->
+	<FeedbackPresentation mode="free">central</FeedbackPresentation>
+	<!-- specifies where the feedback is presented in free mode -->
+	<!-- central: feedback is presented in the center of the screen, color: if the symbol in the keyboard itself is highlighted -->
+	<FeedbackPresentation mode="copy">color</FeedbackPresentation>
+	<!-- software: use software tagging in OpenViBE through shared memory (you have to enable this in the acquisition server application) 
+	 or you can use hardware: uses the parallel port to tag the data directly in the amplifier/device-->
+	<Tagging method="software">
+		<!-- 0x378 for the windows laptops/docks of the hospital, 0xE060 for the INRIA desktop at the lab and 0 for linux -->
+		<ParallelPortNumber>0x378</ParallelPortNumber>
+		<PhotoDiode>no</PhotoDiode><!-- photo diode area light up for each flash -->
+		<!-- only need to specify this in case of hardware tagging, the parallel port of the TMSI device is sampled at the same frequencey as the EEG -->
+		<SampleFrequency>256</SampleFrequency>
+	</Tagging>
+</ExternelP300Stimulator>

@@ -1,0 +1,71 @@
+/**
+ * \page BoxAlgorithm_HilbertTransform Hilbert Transform
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_HilbertTransform_Description|
+ 
+ This box computes the envelope and the instantaneous phase by performing the Discrete-Time Analytic signal [1] using Hilbert transform (see http://en.wikipedia.org/wiki/Analytic_signal).
+
+The definition of analytic signal :
+\image html AnalyticRepresentation.png
+
+<!-- "Formula of the Analytic signal is x_a(t)=x(t)+i*H(x)(t)"-->
+
+With \e x(t) the input signal, \e H(x) its Hilbert transform and \e i the imaginary unit. 
+
+For more informations on Hilbert transform and EEG see also : http://www.scholarpedia.org/article/Hilbert_transform_for_brain_waves
+
+
+[1] Marple, S.L., "Computing the discrete-time analytic signal via FFT," IEEE Transactions on Signal Processing, Vol. 47, No.9 (September 1999), pp.2600-2603.
+ 
+ 
+ * |OVP_DocEnd_BoxAlgorithm_HilbertTransform_Description|
+__________________________________________________________________
+
+Inputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_HilbertTransform_Inputs|
+ * |OVP_DocEnd_BoxAlgorithm_HilbertTransform_Inputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_HilbertTransform_Input1|
+ The input signal
+ * |OVP_DocEnd_BoxAlgorithm_HilbertTransform_Input1|
+__________________________________________________________________
+
+Outputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_HilbertTransform_Outputs|
+ * |OVP_DocEnd_BoxAlgorithm_HilbertTransform_Outputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_HilbertTransform_Output1|
+ Return the Hilbert transform (imaginary part of the analytic signal) of the input
+ * |OVP_DocEnd_BoxAlgorithm_HilbertTransform_Output1|
+
+ * |OVP_DocBegin_BoxAlgorithm_HilbertTransform_Output2|
+ Return the envelope signal of the input
+ * |OVP_DocEnd_BoxAlgorithm_HilbertTransform_Output2|
+
+ * |OVP_DocBegin_BoxAlgorithm_HilbertTransform_Output3|
+ Return instantaneous phase of the input
+ * |OVP_DocEnd_BoxAlgorithm_HilbertTransform_Output3|
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_HilbertTransform_Examples|
+ <!--TO DO : Add some examples and screenshots of the results-->
+ * |OVP_DocEnd_BoxAlgorithm_HilbertTransform_Examples|
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_HilbertTransform_Miscellaneous|
+ * |OVP_DocEnd_BoxAlgorithm_HilbertTransform_Miscellaneous|
+ */

@@ -1,0 +1,64 @@
+
+material v2_gris_fonce
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.251804 0.251804 0.251804 1
+		}
+
+	}
+
+}
+
+
+
+material lambert1
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.5 0.5 0.5 1
+		}
+
+	}
+
+}
+
+
+
+material v2_gris_clair
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.748196 0.748196 0.748196 1
+		}
+
+	}
+
+}
+
+
+
+material v2_pare_brise
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.602526 0.728651 0.733 1
+		}
+
+	}
+
+}
+
+

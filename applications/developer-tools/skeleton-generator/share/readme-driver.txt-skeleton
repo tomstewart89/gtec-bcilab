@@ -1,0 +1,42 @@
+******************************************************
+* Thanks for using the OpenViBE Skeleton Generator ! *
+******************************************************
+
+File generation completed
+[@@Date@@]
+-------------------------
+
+WARNING:
+Writing a new driver for an EEG device is often dependent on hardware specifications, such as OS compatibility
+or communication protocol. The generator gives you only the basic skeletons for easy integration with OpenViBE, 
+please refer to your device specifications (API, protocol description, etc.) for the next steps...
+
+The generator produced the following files:
+
+The Configuration and Driver classes:
+- ovasCConfiguration@@ClassName@@.h
+- ovasCConfiguration@@ClassName@@.cpp
+- ovasCDriver@@ClassName@@.h
+- ovasCDriver@@ClassName@@.cpp
+You can put these files here in your local repository:
+     [openvibe-repository]/contrib/plugins/server-drivers/[my-device]/src/
+
+The glade interface:
+- interface-@@ClassName@@.glade
+You can put this file in here in your local repository:
+     [openvibe-repository]/contrib/plugins/server-drivers/[my-device]/share/
+
+Don't forget to declare your driver to the Acquisition Server application.
+This happens in "./contrib/common/contribAcquisitionServer.inl", there you 
+will find examples of such declarations. You also need to register the source
+files to CMake, modifying the corresponding "contribAcquisitionServer.cmake".
+
+For more information about building a new driver and filling your skeleton, please read the official tutorial:
+http://openvibe.inria.fr/tutorial-creating-a-new-driver-for-the-acquisition-server/
+
+Feel free to propose your contribution on the forum ! 
+http://openvibe.inria.fr/forum/
+
+Enjoy OpenViBE !
+
+- The development team -

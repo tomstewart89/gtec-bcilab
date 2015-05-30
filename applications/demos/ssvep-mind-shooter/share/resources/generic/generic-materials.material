@@ -1,0 +1,1152 @@
+
+
+	material GenericSurface/stripes-blue
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-blue.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-blue-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-blue-dark.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-blue-90
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-blue.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-blue-90-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-blue-dark.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-blue-180
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-blue.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-blue-180-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-blue-dark.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-red
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-red.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-red-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-red-dark.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-red-90
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-red.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-red-90-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-red-dark.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-red-180
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-red.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-red-180-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-red-dark.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-blue
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-blue.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-blue-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-blue-dark.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-blue-90
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-blue.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-blue-90-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-blue-dark.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-blue-180
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-blue.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-blue-180-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-blue-dark.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-green
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-green.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-green-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-green-dark.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-green-90
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-green.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-green-90-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-green-dark.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-green-180
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-green.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-green-180-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-green-dark.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-green
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-green.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-green-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-green-dark.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-green-90
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-green.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-green-90-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-green-dark.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-green-180
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-green.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-green-180-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-green-dark.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-red
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-red.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-red-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-red-dark.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-red-90
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-red.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-red-90-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-red-dark.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-red-180
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-red.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/stripes-red-180-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture stripes-red-dark.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/checkers-red
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture checkers-red.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/checkers-red-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture checkers-red-dark.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/checkers-red-90
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture checkers-red.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/checkers-red-90-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture checkers-red-dark.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/checkers-red-180
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture checkers-red.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/checkers-red-180-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture checkers-red-dark.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-white
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-white.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-white-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-white-dark.png
+					
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-white-90
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-white.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-white-90-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-white-dark.png
+					rotate 90
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-white-180
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-white.png
+					rotate 180
+				}
+			}
+		}
+	}
+
+
+
+	material GenericSurface/filled-white-180-dark
+	{
+		technique
+		{
+			pass
+			{
+				ambient 1 1 1 1
+				diffuse 1 1 1 1
+				specular 0 0 0 0
+				emissive 0 0 0
+
+				scene_blend alpha_blend
+
+				texture_unit
+				{
+					texture filled-white-dark.png
+					rotate 180
+				}
+			}
+		}
+	}
+

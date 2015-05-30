@@ -1,0 +1,49 @@
+
+         *========================================*
+                      |OpenViBE| |AUTHORS|
+         *========================================*
+
+         Contact: http://openvibe.inria.fr/contact/
+		 
+|People|
+
+Project Leader :
+ - Anatole Lecuyer, Inria
+
+Lead Software Engineer :
+ - Jussi T. Lindgren, Inria
+
+Core Developers :
+ - Alison Cellard, Inria
+ - Loic Mahe, Inria
+ - Guillaume Serrière, Inria
+
+SED Support Engineer
+ - Guillermo Andrade-Barroso, Inria
+
+Former Core Developers :
+ - Yann Renard, Inria
+ - Laurent Bonnet, Inria
+ - Jozef Legény, Inria
+ - Vincent Delannoy, Inria
+ - Fabien Lotte, Inria
+ - Bruno Renier, Inria
+ - Baptiste Payan, Inria
+
+Scientific Steering Committee :
+ - Laurent Bougrain, Inria
+ - Maureen Clerc, Inria
+ - Anatole Lecuyer, Inria
+ - Fabien Lotte, Inria
+ - Theodore Papadopoulo, Inria
+
+Contributors :
+
+ - Please see 
+   
+   http://openvibe.inria.fr/contributors/
+
+ 
+|End.of.file|
+
+ vim:tw=78:ts=8:ft=help:norl:

@@ -1,0 +1,36 @@
+#blabla
+
+# @FIXME there is a problem of using the global log, this will cause interference if any tests are run in parallel
+
+IF(WIN32)
+	SET(EXT cmd)
+	SET(OS_FLAGS "--no-pause")
+	SET(OV_LOGFILE "$ENV{APPDATA}/openvibe/log/openvibe-designer.log")
+ELSE(WIN32)
+	SET(EXT sh)
+	SET(OS_FLAGS "")
+	SET(OV_LOGFILE "$ENV{HOME}/.config/openvibe/log/openvibe-designer.log")	
+ENDIF(WIN32)
+
+SET(TEST_SCENARIOS LDA-OneVsOne-HT-Test LDA-OneVsOne-PKPD-Test LDA-OneVsOne-Voting-Test LDA-OneVsAll-Test sLDA-OneVsOne-HT-Test sLDA-OneVsOne-PKPD-Test sLDA-OneVsOne-Voting-Test sLDA-OneVsAll-Test SVM-Native-Test SVM-OneVsOne-Voting-Test SVM-OneVsOne-HT-Test SVM-OneVsOne-PKPD-Test SVM-OneVsAll-Test)
+
+FOREACH(TEST_NAME ${TEST_SCENARIOS})
+
+	SET(SCENARIO_TO_TEST "${TEST_NAME}.xml")
+
+	ADD_TEST(clean_${TEST_NAME} rm -f ${OV_LOGFILE} classifiers/multiclass.xml)
+	ADD_TEST(run_${TEST_NAME} "$ENV{OV_BINARY_PATH}/openvibe-designer.${EXT}" ${OS_FLAGS} "--no-gui"  "--no-session-management" "--config" "$ENV{OV_BINARY_PATH}/share/openvibe/kernel/openvibe_test.conf" "--play-fast" ${SCENARIO_TO_TEST})
+	ADD_TEST(compare_${TEST_NAME} "$ENV{OV_BINARY_PATH}/test_accuracy.${EXT}" "${OS_FLAGS}" "${OV_LOGFILE}")
+	
+	# It would be better to clean last, but we can't do this as it will delete the 
+	# output we wish to include, and we can't prevent clean from running if a prev. test fails
+	# We need the clean to be sure that the comparator stage is not getting data from a previous run.
+	SET_TESTS_PROPERTIES(run_${TEST_NAME} PROPERTIES DEPENDS clean_${TEST_NAME})
+	SET_TESTS_PROPERTIES(run_${TEST_NAME} PROPERTIES ATTACHED_FILES_ON_FAIL ${OV_LOGFILE})
+
+	SET_TESTS_PROPERTIES(compare_${TEST_NAME} PROPERTIES DEPENDS run_${TEST_NAME}})
+	SET_TESTS_PROPERTIES(compare_${TEST_NAME} PROPERTIES ATTACHED_FILES_ON_FAIL ${OV_LOGFILE})
+
+ENDFOREACH(TEST_NAME)
+
+

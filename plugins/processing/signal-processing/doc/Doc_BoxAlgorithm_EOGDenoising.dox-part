@@ -1,0 +1,69 @@
+/**
+ * \page BoxAlgorithm_EOGDenoising EOG Denoising
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoising_Description|
+ * This box uses a denoising matrix 'b' calculated previously through the EOG_Denoising_Calibration for removing the EOG effects on EEG. The principle is based on regression analysis (see article 'A fully automated correction method of EOG artifacts in EEG recordings) where a matrix 'b' is estimated being:b = <'Nt N>-¹<'N S> with N being the noise (EOG electrodes) and S the source (EEG electrodes).
+ The signal output is the EEG_Corrected (free of EOG noise):O=S-b*N (EEG_Corrected = EEG - b*EOG)
+ 
+ 
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoising_Description|
+__________________________________________________________________
+
+Inputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoising_Inputs|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoising_Inputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoising_Input1|
+ * Make sure to select the same quantity of EEG channels as specified in your 'b' parameter matrix
+ 
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoising_Input1|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoising_Input2|
+ * Make sure to select the same quantity of EOG channels as specified in your 'b' parameter matrix
+ 
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoising_Input2|
+__________________________________________________________________
+
+Outputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoising_Outputs|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoising_Outputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoising_Output1|
+ * The output has the same structure as the EEG input
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoising_Output1|
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoising_Settings|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoising_Settings|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoising_Setting1|
+ * Make sure to select the right file containing your 'b' matrix with the right coefficients
+ 
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoising_Setting1|
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoising_Examples|
+ * You can apply these boxes in a set with a high density of blinking eyes and see the results before and after.
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoising_Examples|
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoising_Miscellaneous|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoising_Miscellaneous|
+ */

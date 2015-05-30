@@ -1,0 +1,26 @@
+material target_bright
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 0
+			diffuse 0 0 0 0
+			specular 0 0 0 0
+			emissive 1 0 0
+		}
+	}
+}
+material target_dark
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 0
+			diffuse 0 0 0 0
+			specular 0 0 0 0
+			emissive 0.1 0 0
+		}
+	}
+}

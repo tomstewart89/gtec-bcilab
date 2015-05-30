@@ -1,0 +1,82 @@
+/**
+ * \page BoxAlgorithm_StreamSwitch Stream Switch
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Description|
+ The Stream Switch box redirects a Streamed Matrix input to one particular output according to stimulation received. Each output is triggered by a specific stimulation, detailed in the box settings.
+ 
+ <b>Note 1:</b> if the same stimulation is used by 2 or more outputs, only the first output will be activated when receiving the stimulation.
+ <b>Note 2:</b> at startup, none of the outputs is activated, unless 'Default to output 1' has been set to true in the box configuration.
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Description|
+__________________________________________________________________
+
+Inputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Inputs|
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Inputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Input1|
+  Stimulations to switch from one output to another.
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Input1|
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Input2|
+ The stream to redirect. It can be any Streamed Matrix subtype.
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Input2|
+__________________________________________________________________
+
+Outputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Outputs|
+ The box can have 2 or more outputs, all have the same type as the input stream.
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Outputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Output1|
+ The first possible output.
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Output1|
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Output2|
+ The second possible output.
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Output2|
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Settings|
+ The box has a stimulation setting for each of its outputs. Each such setting dictates the stimulation that activates the corresponding output.
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Settings|
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Setting1|
+ If this flag is set to true, the box will output to the first channel by default without requiring a stimulus first.
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Setting1|
+ 
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Setting2|
+ The first possible switch trigger.
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Setting2|
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Setting3|
+ The second possible switch trigger.
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Setting3|
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Examples|
+ The scenario <i>stream-switch.xml</i> in <i>share/openvibe/scenarios/box-tutorials</i> is a simple, commented example.
+ 
+ The Stream Switch can be used in more complex situations as well, for example in an online classifier comparison scenario. The scenario <i>motor-imagery-5-classifier-comparison.xml</i> in <i>share/openvibe/scenarios/bci-examples/motor-imagery</i> is a commented example of such a situation.
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Examples|
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_StreamSwitch_Miscellaneous|
+ * |OVP_DocEnd_BoxAlgorithm_StreamSwitch_Miscellaneous|
+ */

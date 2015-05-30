@@ -1,0 +1,33 @@
+
+material v4_texture_vaisseau
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+
+			texture_unit
+			{
+				texture v4_image_vaisseau.png
+			}
+		}
+
+	}
+}
+
+material v4_viseur1
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 0 0 1
+		}
+
+	}
+
+}
+
+

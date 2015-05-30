@@ -1,0 +1,24 @@
+
+material lambert2
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0 0 0 1
+			specular 0 0 0 1
+			emissive 1 1 1
+			
+
+			texture_unit
+			{
+				texture stars.png
+			}
+		}
+
+	}
+
+}
+
+

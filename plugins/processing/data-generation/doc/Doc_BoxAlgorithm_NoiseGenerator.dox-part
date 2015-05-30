@@ -1,0 +1,49 @@
+/**
+ * \page BoxAlgorithm_NoiseGenerator Noise generator
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_NoiseGenerator_Description|
+ The Noise Generator outputs random signals on a configurable number of channels. The sampling frequency and epoch size can be configured as well. The data is sampled from a pseudorandom uniform distribution.
+ * |OVP_DocEnd_BoxAlgorithm_NoiseGenerator_Description|
+__________________________________________________________________
+
+Outputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_NoiseGenerator_Outputs|
+ * |OVP_DocEnd_BoxAlgorithm_NoiseGenerator_Outputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_NoiseGenerator_Output1|
+ Random signal generated.
+ * |OVP_DocEnd_BoxAlgorithm_NoiseGenerator_Output1|
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_NoiseGenerator_Settings|
+ * |OVP_DocEnd_BoxAlgorithm_NoiseGenerator_Settings|
+
+ * |OVP_DocBegin_BoxAlgorithm_NoiseGenerator_Setting1|
+Number of channels generated.
+ * |OVP_DocEnd_BoxAlgorithm_NoiseGenerator_Setting1|
+
+ * |OVP_DocBegin_BoxAlgorithm_NoiseGenerator_Setting2|
+ Sampling frequency of generated signals.
+ * |OVP_DocEnd_BoxAlgorithm_NoiseGenerator_Setting2|
+
+ * |OVP_DocBegin_BoxAlgorithm_NoiseGenerator_Setting3|
+ Number of samples per epoch
+ * |OVP_DocEnd_BoxAlgorithm_NoiseGenerator_Setting3|
+
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_NoiseGenerator_Miscellaneous|
+ * |OVP_DocEnd_BoxAlgorithm_NoiseGenerator_Miscellaneous|
+ */

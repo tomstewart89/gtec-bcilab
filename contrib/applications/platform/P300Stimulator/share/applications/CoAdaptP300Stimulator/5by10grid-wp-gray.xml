@@ -1,0 +1,465 @@
+<!--  xml file specifying a keyboard layout, see 5by10grid-abc-gray.xml for some more explanation -->
+<ScreenLayout>
+	<DefaultKeyProperties>
+		<Event id="noflash">
+			<TextSymbol>
+				<ScaleSize>0.6</ScaleSize>
+				<ForegroundColor>20,20,20</ForegroundColor>
+				<BackgroundColor>10,10,10</BackgroundColor>
+				<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+				<Label>A</Label>
+			</TextSymbol>
+		</Event>
+		<Event id="flash">
+			<PictureSymbol>
+				<ScaleSize>0.85</ScaleSize>
+				<ForegroundColor>70,70,70</ForegroundColor>
+				<BackgroundColor>10,10,10</BackgroundColor>
+				<Source>openvibe/applications/CoAdaptP300Stimulator/smiley.png</Source>
+			</PictureSymbol>
+		</Event>	
+		<Event id="target">
+			<TextSymbol>
+				<ScaleSize>0.7</ScaleSize>
+				<ForegroundColor>20,20,20</ForegroundColor>
+				<BackgroundColor>10,10,65</BackgroundColor>
+				<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+				<Label>A</Label>
+			</TextSymbol>
+		</Event>	
+		<Event id="correct_feedback">
+			<TextSymbol>
+				<ScaleSize>0.7</ScaleSize>
+				<ForegroundColor>10,20,10</ForegroundColor>
+				<BackgroundColor>0,40,0</BackgroundColor>
+				<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+				<Label>A</Label>
+			</TextSymbol>
+		</Event>
+		<Event id="wrong_feedback">
+			<TextSymbol>
+				<ScaleSize>0.7</ScaleSize>
+				<ForegroundColor>50,20,20</ForegroundColor>
+				<BackgroundColor>92,5,5</BackgroundColor>
+				<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+				<Label>A</Label>
+			</TextSymbol>
+		</Event>			
+	</DefaultKeyProperties>
+	<TargetArea x="0.05" y="0.125" width="0.65" height="0.075">
+		<!--BackgroundColor>10,10,10</BackgroundColor-->
+	</TargetArea>
+	<ResultArea x="0.05" y="0.05" width="0.65" height="0.075">
+		<!--BackgroundColor>10,10,10</BackgroundColor-->
+	</ResultArea>
+	<PredictionArea x="0.05" y="0.25" width="0.9" height="0.15" ncolumns="3" nrows="2">
+		<!--BackgroundColor>10,10,10</BackgroundColor-->
+	</PredictionArea>
+	<P300Keyboard x="0.05" y="0.45" width="0.9" height="0.50" numberOfStandardKeys="43">	
+		<Key x="0" y="0.8" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>A</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>A</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>A</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>A</Label></TextSymbol></Event>
+		</Key>	
+		<Key x="0.1" y="0.8" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>B</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>B</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>B</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>B</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.2" y="0.8" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>C</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>C</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>C</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>C</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.3" y="0.8" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>D</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>D</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>D</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>D</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.4" y="0.8" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>E</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>E</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>E</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>E</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.5" y="0.8" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>F</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>F</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>F</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>F</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.6" y="0.8" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>G</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>G</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>G</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>G</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.7" y="0.8" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>H</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>H</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>H</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>H</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.8" y="0.8" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>I</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>I</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>I</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>I</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.9" y="0.8" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>J</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>J</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>J</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>J</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0" y="0.6" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>K</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>K</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>K</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>K</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.1" y="0.6" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>L</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>L</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>L</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>L</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.2" y="0.6" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>M</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>M</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>M</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>M</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.3" y="0.6" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>N</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>N</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>N</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>N</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.4" y="0.6" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>O</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>O</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>O</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>O</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.5" y="0.6" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>P</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>P</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>P</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>P</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.6" y="0.6" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>Q</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>Q</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>Q</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>Q</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.7" y="0.6" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>R</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>R</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>R</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>R</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.8" y="0.6" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>S</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>S</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>S</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>S</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.9" y="0.6" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>T</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>T</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>T</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>T</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0" y="0.4" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>U</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>U</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>U</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>U</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.1" y="0.4" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>V</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>V</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>V</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>V</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.2" y="0.4" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>W</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>W</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>W</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>W</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.3" y="0.4" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>X</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>X</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>X</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>X</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.4" y="0.4" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>Y</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>Y</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>Y</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>Y</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.5" y="0.4" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>Z</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>Z</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>Z</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>Z</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.6" y="0" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>0</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>0</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>0</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>0</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.7" y="0" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>1</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>1</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>1</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>1</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.8" y="0" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>2</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>2</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>2</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>2</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.9" y="0" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>3</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>3</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>3</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>3</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.7" y="0.2" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>4</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>4</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>4</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>4</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.8" y="0.2" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>5</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>5</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>5</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>5</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.9" y="0.2" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>6</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>6</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>6</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>6</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.7" y="0.4" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>7</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>7</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>7</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>7</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.8" y="0.4" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>8</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>8</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>8</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>8</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.9" y="0.4" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>9</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>9</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>9</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>9</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.3" y="0" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label> </Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label> </Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label> </Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label> </Label></TextSymbol></Event>
+		</Key>		
+		<Key x="0" y="0" width="0.1" height="0.2">
+			<Action>undo</Action>
+			<Event id="noflash"><TextSymbol><Label>UNDO</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>UNDO</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>UNDO</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>UNDO</Label></TextSymbol></Event>
+		</Key>		
+		<Key x="0.2" y="0.2" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>.</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>.</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>.</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>.</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.3" y="0.2" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>?</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>?</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>?</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>?</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.4" y="0.2" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>,</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>,</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>,</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>,</Label></TextSymbol></Event>
+		</Key>	
+		<Key x="0.2" y="0" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>@</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>@</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>@</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>@</Label></TextSymbol></Event>
+		</Key>
+		<Key x="0.4" y="0" width="0.1" height="0.2">
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>$</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>$</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>$</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>$</Label></TextSymbol></Event>
+		</Key>
+		
+		
+		<Key x="1" y="1" width="1" height="1">
+			<Action>wordprediction</Action>
+			<Event id="flash">			
+				<TextSymbol>
+					<ScaleSize>0.9</ScaleSize>
+					<ForegroundColor>70,70,70</ForegroundColor>
+					<BackgroundColor>10,10,10</BackgroundColor>
+					<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+					<Label>A</Label>
+				</TextSymbol>
+			</Event>			
+			<Event id="noflash"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+		</Key>
+		<Key x="1" y="1" width="1" height="1">
+			<Action>wordprediction</Action>
+			<Event id="flash">			
+				<TextSymbol>
+					<ScaleSize>0.9</ScaleSize>
+					<ForegroundColor>70,70,70</ForegroundColor>
+					<BackgroundColor>10,10,10</BackgroundColor>
+					<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+					<Label>A</Label>
+				</TextSymbol>
+			</Event>			
+			<Event id="noflash"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+		</Key>
+		<Key x="1" y="1" width="1" height="1">
+			<Action>wordprediction</Action>
+			<Event id="flash">			
+				<TextSymbol>
+					<ScaleSize>0.9</ScaleSize>
+					<ForegroundColor>70,70,70</ForegroundColor>
+					<BackgroundColor>10,10,10</BackgroundColor>
+					<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+					<Label>A</Label>
+				</TextSymbol>
+			</Event>			
+			<Event id="noflash"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+		</Key>
+		<Key  x="1" y="1" width="1" height="1">
+			<Action>wordprediction</Action>
+			<Event id="flash">			
+				<TextSymbol>
+					<ScaleSize>0.9</ScaleSize>
+					<ForegroundColor>70,70,70</ForegroundColor>
+					<BackgroundColor>10,10,10</BackgroundColor>
+					<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+					<Label>A</Label>
+				</TextSymbol>
+			</Event>			
+			<Event id="noflash"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+		</Key>
+		<Key x="1" y="1" width="1" height="1">
+			<Action>wordprediction</Action>
+			<Event id="flash">			
+				<TextSymbol>
+					<ScaleSize>0.9</ScaleSize>
+					<ForegroundColor>70,70,70</ForegroundColor>
+					<BackgroundColor>10,10,10</BackgroundColor>
+					<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+					<Label>A</Label>
+				</TextSymbol>
+			</Event>
+			<Event id="noflash"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+		</Key>
+		<Key x="1" y="1" width="1" height="1">
+			<Action>wordprediction</Action>
+			<Event id="flash">			
+				<TextSymbol>
+					<ScaleSize>0.9</ScaleSize>
+					<ForegroundColor>70,70,70</ForegroundColor>
+					<BackgroundColor>10,10,10</BackgroundColor>
+					<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+					<Label>A</Label>
+				</TextSymbol>
+			</Event>			
+			<Event id="noflash"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+		</Key>		
+		<!--Key>
+			<Action>undo</Action>
+			<Event id="noflash">
+				<Label>UNDO</Label>
+			</Event>
+		</Key-->		
+	</P300Keyboard>
+</ScreenLayout>

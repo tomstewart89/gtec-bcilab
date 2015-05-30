@@ -1,0 +1,11 @@
+material BasicSurface/Diffuse
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+		}
+	}
+}
+

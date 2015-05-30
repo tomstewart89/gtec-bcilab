@@ -1,0 +1,5 @@
+TestRunCommand Params: 1="has space" 2= 3= 4=
+TestRunCommand Params: 1=nospace 2= 3= 4=
+TestRunCommand Params: 1="has space" 2=two 3= 4=
+TestRunCommand Params: 1= 2= 3= 4=
+TestRunCommand Params: 1=arg1 2=arg2 3=arg3 4=

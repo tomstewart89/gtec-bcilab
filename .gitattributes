@@ -1,0 +1,13 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+*.cmd       text eol=crlf
+*.cmd-base  text eol=crlf
+*.nsi       text eol=crlf
+
+*.m         text eol=lf
+*.sh        text eol=lf
+*.sh-base   text eol=lf
+
+scripts/linux*    text eol=lf
+

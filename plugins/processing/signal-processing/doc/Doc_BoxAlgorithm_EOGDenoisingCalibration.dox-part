@@ -1,0 +1,77 @@
+/**
+ * \page BoxAlgorithm_EOGDenoisingCalibration EOG_Denoising_Calibration
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Description|
+  This box calculates a denoising matrix 'b' for removing the EOG effects on EEG. The principle is based on regression analysis (see article 'A fully automated correction method of EOG artifacts in EEG recordings' - Schlogl2007) where a matrix 'b' is estimated being: b = <'Nt N>-¹<'N S> with N being the noise (EOG electrodes) and S the source (EEG electrodes).
+ This box reads necessarily from a file where the subject does lots of blinks. User will set a starting and an ending point at this file then the program will calculates the b matrix after reading throughout the file.
+ 
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Description|
+__________________________________________________________________
+
+Inputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Inputs|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Inputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Input1|
+ * Make sure to select the desirable EEG channels 
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Input1|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Input2|
+ * Make sure to select the desirable EOG channels
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Input2|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Input3|
+ * Connect this stimulation to the keyboard_controller.
+ * Press 'a' for set the starting point and 'u' for set the ending point
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Input3|
+__________________________________________________________________
+
+Outputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Outputs|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Outputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Output1|
+ Connect this stimulation to the Player Controller to stop the scenario when b matrix is calculated
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Output1|
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Settings|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Settings|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Setting1|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Setting1|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Setting2|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Setting2|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Setting3|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Setting3|
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Setting4|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Setting4|
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Examples|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Examples|
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_EOGDenoisingCalibration_Miscellaneous|
+ * |OVP_DocEnd_BoxAlgorithm_EOGDenoisingCalibration_Miscellaneous|
+ */

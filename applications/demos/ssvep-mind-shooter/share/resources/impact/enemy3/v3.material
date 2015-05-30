@@ -1,0 +1,33 @@
+
+material v3_jaune
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.955 0.851701 0.39155 1
+		}
+
+	}
+
+}
+
+
+
+material v3_pare_brise
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.677133 0.783711 0.837 1
+			specular 0.5 0.5 0.5 1 25.6
+		}
+
+	}
+
+}
+
+

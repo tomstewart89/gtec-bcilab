@@ -1,0 +1,55 @@
+/**
+ * \page BoxAlgorithm_MouseTracking Mouse Tracking
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_MouseTracking_Description|
+ Opens a gtk window and track mouse within that window.
+ * |OVP_DocEnd_BoxAlgorithm_MouseTracking_Description|
+__________________________________________________________________
+
+Outputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_MouseTracking_Outputs|
+ * |OVP_DocEnd_BoxAlgorithm_MouseTracking_Outputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_MouseTracking_Output1|
+ Output the raw coordinates of mouse position.
+ * |OVP_DocEnd_BoxAlgorithm_MouseTracking_Output1|
+
+ * |OVP_DocBegin_BoxAlgorithm_MouseTracking_Output2|
+ Output relative coordinates to previous position of the mouse.
+ * |OVP_DocEnd_BoxAlgorithm_MouseTracking_Output2|
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_MouseTracking_Settings|
+ * |OVP_DocEnd_BoxAlgorithm_MouseTracking_Settings|
+
+ * |OVP_DocBegin_BoxAlgorithm_MouseTracking_Setting1|
+ Sampling frequency. 
+ * |OVP_DocEnd_BoxAlgorithm_MouseTracking_Setting1|
+
+ * |OVP_DocBegin_BoxAlgorithm_MouseTracking_Setting2|
+ Generated epoch sample count. Set the size of chunk. 1 in most cases : there is only one position at each time.
+ * |OVP_DocEnd_BoxAlgorithm_MouseTracking_Setting2|
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_MouseTracking_Examples|
+ * |OVP_DocEnd_BoxAlgorithm_MouseTracking_Examples|
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_MouseTracking_Miscellaneous|
+ * |OVP_DocEnd_BoxAlgorithm_MouseTracking_Miscellaneous|
+ */

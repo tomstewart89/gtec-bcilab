@@ -1,0 +1,14 @@
+<ExternelP300Stimulator>
+	<SharedMemoryName>SharedMemory_P300Stimulator</SharedMemoryName>
+	<TargetWord>${CoAdaptP300_WordToSpell}</TargetWord>
+	<InitialNumberOfGroups>${CoAdaptP300_NumberOfGroups}</InitialNumberOfGroups>
+	<MinRepetitions>2</MinRepetitions>
+	<MaxRepetitions>${CoAdaptP300_NrOfRepetitions}</MaxRepetitions>
+	<NumberOfTrials>${CoAdaptP300_WordLength}</NumberOfTrials>
+	<FlashDuration>${CoAdaptP300_FlashDuration}</FlashDuration>
+	<InterStimulusOnset>${CoAdaptP300_InterStimulusOnset}</InterStimulusOnset>
+	<InterRepetitionDelay>${CoAdaptP300_InterRepDuration}</InterRepetitionDelay>
+	<InterTrialDelay>5</InterTrialDelay>
+	<EarlyStopping>${CoAdaptP300_EarlyStopping}</EarlyStopping>
+	<StopCondition>${CoAdaptP300_StopCondition}</StopCondition>
+</ExternelP300Stimulator>

@@ -1,0 +1,13 @@
+local-tmp
+dependencies
+scripts/win32-dependencies.cmd
+dist
+build
+CMakeLists.txt.*
+.*.swp
+externals/*/
+*~
+*.swp
+.project
+.cproject
+

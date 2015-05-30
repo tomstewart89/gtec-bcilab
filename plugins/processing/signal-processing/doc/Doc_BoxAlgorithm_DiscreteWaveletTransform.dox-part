@@ -1,0 +1,79 @@
+/**
+ * \page BoxAlgorithm_DiscreteWaveletTransform DiscreteWaveletTransform
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Description|
+ * This box calculates the discrete wavelet transform using the following library:
+ http://wavelet2d.sourceforge.net/
+ There are differents options for the wavelet's choice like Haar,Daubechie, Biorthogonal, Coiflets, Symlets.
+ The user must pay attention in the samples quantity sent to the box because it has to be higher than 2^J 
+ where J is the decomposition levels.
+ 
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Description|
+__________________________________________________________________
+
+Inputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Inputs|
+ 
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Inputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Input1|
+ Signal to be decomposed.
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Input1|
+__________________________________________________________________
+
+Outputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Outputs|
+ There are at least 3 outputs and there is always the 'Info' output which is necessary to be connected to the 
+ 'Info' signal in the inverse discrete wavelets transform.
+ The decompositions start with the less detailed level (low frequencies) (A) and go until the highest detailed level (high frequencies) (D1)   
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Outputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Output1|
+ Info signal (needed to export samples length)
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Output1|
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Output2|
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Output2|
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Output3|
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Output3|
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Output4|
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Output4|
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Settings|
+ You can choose the level of decomposition and the wavelet type
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Settings|
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Setting1|
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Setting1|
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Setting2|
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Setting2|
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Examples|
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Examples|
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_DiscreteWaveletTransform_Miscellaneous|
+ * |OVP_DocEnd_BoxAlgorithm_DiscreteWaveletTransform_Miscellaneous|
+ */

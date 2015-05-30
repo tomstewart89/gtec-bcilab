@@ -1,0 +1,34 @@
+<scene formatVersion="1.0" upAxis="y" unitsPerMeter="100" unitType="centimeters" minOgreVersion="1.7" ogreMaxVersion="2.3.14" author="OgreMax Scene Exporter (www.ogremax.com)" application="Maya">
+    <environment>
+        <colourAmbient r="0.33" g="0.33" b="0.33" />
+        <colourBackground r="0" g="0" b="0" />
+        <clipping near="0" far="100000" />
+    </environment>
+    <nodes>
+    <node name="v2_vaisseau">
+        <node name="v2_habitacle">
+            <position x="0" y="0" z="0" />
+            <scale x="1" y="1" z="1" />
+            <rotation qx="0" qy="0" qz="0" qw="1" />
+            <entity name="v2_habitacle" castShadows="true" receiveShadows="true" meshFile="v2_habitacle.mesh">
+                <subentities>
+                    <subentity index="0" materialName="v2_gris_fonce" />
+                    <subentity index="1" materialName="lambert1" />
+                    <subentity index="2" materialName="v2_gris_clair" />
+                    <subentity index="3" materialName="v2_pare_brise" />
+                </subentities>
+            </entity>
+        </node>
+        <node name="v2_soutes">
+            <position x="0" y="0" z="0" />
+            <scale x="1" y="1" z="1" />
+            <rotation qx="0" qy="0" qz="0" qw="1" />
+            <entity name="v2_soutes" castShadows="true" receiveShadows="true" meshFile="v2_soutes.mesh">
+                <subentities>
+                    <subentity index="0" materialName="v2_gris_clair" />
+                </subentities>
+            </entity>
+        </node>
+    </node>
+    </nodes>
+</scene>

@@ -1,0 +1,99 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }  
+         
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>testStartInterface.UNIX.sikuli</h2> <a href="testStartInterface.UNIX.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">def</span> setUp(self):
+    <span class="kw">import</span> os
+    ov_binany_path=os.environ[<span class="str">'OV_BINARY_PATH'</span>]
+    self.terminal = App.open(<span class="str">"xterm -e "</span> + ov_binany_path +<span class="str">"/openvibe-designer.sh --no-session-management"</span>)
+    <span class="kw">while</span> <span class="kw">not</span> self.terminal.window():
+        <span class="skw">wait</span>(<span class="dig">1</span>)
+    <span class="skw">wait</span>(<img src="StartInterface.png" />,<span class="dig">100</span>)
+
+<span class="kw">def</span> test_boxSetAttributes(self):
+    <span class="skw">click</span>(<img src="SearchBoxBar.png" />)
+    paste(<span class="str">"sinus"</span>)
+    <span class="skw">wait</span>(<span class="dig">3</span>)
+    <span class="skw">dragDrop</span>(<img src="Sinusoscilla-1.png" />,Pattern(<img src="DesignerDataGenOpen.png" />).similar(<span class="dig">0.40</span>).targetOffset(-<span class="dig">233</span>,-<span class="dig">163</span>))
+    <span class="skw">rightClick</span>(<img src="SinusOscillatorBoxSelected.png" />)
+    <span class="skw">click</span>(Pattern(<img src="contextualBoxMenu.png" />).targetOffset(-<span class="dig">51</span>,<span class="dig">16</span>))
+    <span class="kw">assert</span>(exists(<img src="renameBoxPopUp.png" />))
+    <span class="skw">type</span>(<span class="str">"XXXX XXXX XXXX"</span>+ Key.ENTER)
+    <span class="kw">assert</span>(exists(Pattern(<img src="SinusOscillatorNewNameXXX.png" />).similar(<span class="dig">0.50</span>)))
+
+<span class="kw">def</span> tearDown(self):
+    mouseMove(Location(<span class="dig">0</span>,<span class="dig">0</span>))
+    App.close(self.terminal)
+    self.terminal= None
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+</pre>
+</body>
+</html>

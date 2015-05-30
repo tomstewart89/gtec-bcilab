@@ -1,0 +1,18 @@
+# Basic Template Test for automatic run a scenario that produce a file to be compared to a reference file
+# You need to set the name of the test according to name of scenario file and reference file
+
+# Test Time Arithmetics
+
+SET(TEST_NAME "TimeArithmetics")
+
+IF(WIN32)
+	SET(EXT cmd)
+	SET(OS_FLAGS "--no-pause")
+ELSE(WIN32)
+	SET(EXT sh)
+	SET(OS_FLAGS "")
+ENDIF(WIN32)
+
+ADD_TEST(run_${TEST_NAME} "$ENV{OV_BINARY_PATH}/test_timearithmetic.${EXT}" ${OS_FLAGS})
+
+

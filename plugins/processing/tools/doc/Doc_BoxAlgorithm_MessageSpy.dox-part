@@ -1,0 +1,57 @@
+/**
+ * \page BoxAlgorithm_MessageSpy EBML stream spy
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_MessageSpy_Description|
+ * The purpose of this box is to spy a message connection and
+ * decode its contents to the log manager. The box loops over
+ * the possible types and keys inside a message and prints
+ * the output.
+ *
+ * This box is mostly useful for debug purpose. It allows
+ * a developper to check what arrives to a box in a human
+ * readable way.
+ * |OVP_DocEnd_BoxAlgorithm_MessageSpy_Description|
+__________________________________________________________________
+
+Inputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_MessageSpy_Inputs|
+ * This box can receive as many message inputs as necessary. 
+ * |OVP_DocEnd_BoxAlgorithm_MessageSpy_Inputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_MessageSpy_Input1|
+ * This is the default input of this box.
+ * |OVP_DocEnd_BoxAlgorithm_MessageSpy_Input1|
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_MessageSpy_Settings|
+ * |OVP_DocEnd_BoxAlgorithm_MessageSpy_Settings|
+
+ * |OVP_DocBegin_BoxAlgorithm_MessageSpy_Setting1|
+ * Indicates what log level will be used to
+ * print the message contents.
+ * |OVP_DocEnd_BoxAlgorithm_MessageSpy_Setting1|
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_MessageSpy_Examples|
+There is a simple example scenario provided in box-tutorials/ called messaging.xml.
+ * |OVP_DocEnd_BoxAlgorithm_MessageSpy_Examples|
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_MessageSpy_Miscellaneous|
+ * |OVP_DocEnd_BoxAlgorithm_MessageSpy_Miscellaneous|
+ */

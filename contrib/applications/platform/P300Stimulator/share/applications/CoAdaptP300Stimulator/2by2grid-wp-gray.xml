@@ -1,0 +1,109 @@
+<!--  xml file specifying a keyboard layout, see 5by10grid-abc-gray.xml for some more explanation -->
+<ScreenLayout>
+	<DefaultKeyProperties>
+		<Event id="noflash">
+			<TextSymbol>
+				<ScaleSize>0.7</ScaleSize>
+				<ForegroundColor>20,20,20</ForegroundColor>
+				<BackgroundColor>10,10,10</BackgroundColor>
+				<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+				<Label>A</Label>
+			</TextSymbol>
+		</Event>
+		<Event id="flash">
+			<PictureSymbol>
+				<ScaleSize>0.8</ScaleSize>
+				<ForegroundColor>70,70,70</ForegroundColor>
+				<BackgroundColor>10,10,10</BackgroundColor>
+				<Source>openvibe/applications/CoAdaptP300Stimulator/smiley.png</Source>
+			</PictureSymbol>
+		</Event>	
+		<Event id="target">
+			<TextSymbol>
+				<ScaleSize>0.7</ScaleSize>
+				<ForegroundColor>20,20,20</ForegroundColor>
+				<BackgroundColor>10,10,65</BackgroundColor>
+				<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+				<Label>A</Label>
+			</TextSymbol>
+		</Event>	
+		<Event id="correct_feedback">
+			<TextSymbol>
+				<ScaleSize>0.7</ScaleSize>
+				<ForegroundColor>10,20,10</ForegroundColor>
+				<BackgroundColor>0,40,0</BackgroundColor>
+				<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+				<Label>A</Label>
+			</TextSymbol>
+		</Event>
+		<Event id="wrong_feedback">
+			<TextSymbol>
+				<ScaleSize>0.7</ScaleSize>
+				<ForegroundColor>50,20,20</ForegroundColor>
+				<BackgroundColor>92,5,5</BackgroundColor>
+				<Source>openvibe/applications/CoAdaptP300Stimulator/VeraMono-Bold.ttf</Source>
+				<Label>A</Label>
+			</TextSymbol>
+		</Event>			
+	</DefaultKeyProperties>
+	<TargetArea x="0.05" y="0.125" width="0.65" height="0.075">
+		<!--BackgroundColor>10,10,10</BackgroundColor-->
+	</TargetArea>
+	<ResultArea x="0.05" y="0.05" width="0.65" height="0.075">
+		<!--BackgroundColor>10,10,10</BackgroundColor-->
+	</ResultArea>
+	<PredictionArea x="0.75" y="0.25" width="0.2" height="0.7" ncolumns="1" nrows="2">
+		<!--BackgroundColor>10,10,10</BackgroundColor-->
+	</PredictionArea>
+	<P300Keyboard x="0.05f" y="0.25" width="0.65" height="0.70" numberOfStandardKeys="4">	
+		<Key>
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>A</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>A</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>A</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>A</Label></TextSymbol></Event>
+		</Key>	
+		<Key>
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>B</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>B</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>B</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>B</Label></TextSymbol></Event>
+		</Key>
+		<Key>
+			<Action>write</Action>
+			<Event id="noflash"><TextSymbol><Label>C</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>C</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>C</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>C</Label></TextSymbol></Event>
+		</Key>
+		<Key>
+			<Action>undo</Action>
+			<Event id="noflash"><TextSymbol><Label>UNDO</Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label>UNDO</Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label>UNDO</Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label>UNDO</Label></TextSymbol></Event>
+		</Key>
+		
+		<Key>
+			<Action>wordprediction</Action>
+			<Event id="noflash"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+		</Key>
+		<Key>
+			<Action>wordprediction</Action>
+			<Event id="noflash"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="target"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="correct_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+			<Event id="wrong_feedback"><TextSymbol><Label></Label></TextSymbol></Event>
+		</Key>		
+		<!--Key>
+			<Action>undo</Action>
+			<Event id="noflash">
+				<Label>UNDO</Label>
+			</Event>
+		</Key-->		
+	</P300Keyboard>
+</ScreenLayout>

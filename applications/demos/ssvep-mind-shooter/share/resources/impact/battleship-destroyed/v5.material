@@ -1,0 +1,62 @@
+
+material v5_texture_vaisseau
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+
+			texture_unit
+			{
+				texture v5_image_vaisseau05.png
+			}
+		}
+
+	}
+
+}
+
+material v5_viseur1
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 0 0 1
+		}
+
+	}
+
+}
+
+
+material feedback_inactive
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.3 0 0 1
+		}
+
+	}
+
+}
+
+material feedback_active
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 0 0 1
+		}
+
+	}
+
+}
+

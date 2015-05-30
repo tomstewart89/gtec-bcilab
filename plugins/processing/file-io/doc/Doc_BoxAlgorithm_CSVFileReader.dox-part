@@ -1,0 +1,131 @@
+/**
+ * \page BoxAlgorithm_CSVFileReader CSV File Reader
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_CSVFileReader_Description|
+This box allows to read some of the OpenViBE streams from a text file that is
+easy to read both by machines and humans. CSV files are text files
+with different values separated by a special character such as a colon, a semicolon
+or a tabulation. This basic syntax makes them very easy to parse. The purpose of this 
+box is to quickly import some data from other softwares.
+
+@b NOTE For files carrying signal, the file format the box accepts is NOT the usual 
+N times M matrix. There must be a few extra items: the first column must be the time
+of each sample, and the first line of data must have one more column than the other lines. 
+This last column should be the sampling rate. See below for details. 
+
+ * |OVP_DocEnd_BoxAlgorithm_CSVFileReader_Description|
+__________________________________________________________________
+
+Inputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_CSVFileReader_Outputs|
+ * |OVP_DocEnd_BoxAlgorithm_CSVFileReader_Outputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_CSVFileReader_Output1|
+This output is used to import data from a CSV File to an OpenViBE stream. The type of
+this output can be modified by the user and the format of the file will be adapted
+depending on this type. Supported outputs are : Signal, Spectrum, Stimulations,
+Feature Vector and Streamed Matrix.
+
+Format specific to some of these stream types is detailed in section
+\ref Doc_BoxAlgorithm_CSVFileReader_Miscellaneous.
+ * |OVP_DocEnd_BoxAlgorithm_CSVFileReader_Output1|
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_CSVFileReader_Settings|
+ * |OVP_DocEnd_BoxAlgorithm_CSVFileReader_Settings|
+
+ * |OVP_DocBegin_BoxAlgorithm_CSVFileReader_Setting1|
+This setting contains the file where to load the data.
+ * |OVP_DocEnd_BoxAlgorithm_CSVFileReader_Setting1|
+
+ * |OVP_DocBegin_BoxAlgorithm_CSVFileReader_Setting2|
+This setting contains the special character to use as a separation for the different
+fields. Typical examples are colon, semi colon and tabulations.
+ * |OVP_DocEnd_BoxAlgorithm_CSVFileReader_Setting2|
+
+ * |OVP_DocBegin_BoxAlgorithm_CSVFileReader_Setting3|
+This option mainly makes sense for an output signal type, but can also be used
+for matrices. Sometimes, the time of the first sample in the data isn't equal 
+0 or the file appears to contain such timing that it is difficult to parse a 
+continuous chunk sequence from it. Many OpenViBE boxes expect continuous 
+chunking, starting at time 0, with no time between the signal chunks. This
+setting interpretes the file as essentially being dense, with consecutive
+chunks, the first chunk (sample) at time 0. The samples are sent according 
+to the timing dictated by the sampling rate specified at the end of the 
+second line of the csv file, with the first column ignored.
+ * |OVP_DocEnd_BoxAlgorithm_CSVFileReader_Setting3|
+ 
+ * |OVP_DocBegin_BoxAlgorithm_CSVFileReader_Setting4|
+Number of samples per channel in a streamed matrix.
+ * |OVP_DocEnd_BoxAlgorithm_CSVFileReader_Setting4|
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_CSVFileReader_Examples|
+ * |OVP_DocEnd_BoxAlgorithm_CSVFileReader_Examples|
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_CSVFileReader_Miscellaneous|
+If the boxes obtaining signal from the CSV File Reader behave curiously, 
+you may want to try enabling the "don't use the file time" setting. Also, 
+if the time is not monotonically increasing from sample to another 
+in the file (this can result from e.g. epoching), the result may not 
+be read back as expected. For such signals, it is best to use the 
+.ov file format and not CSV.
+ 
+Here are some typical inputs that you will find in the input
+file depending on the type of the input connector.
+
+For the Signal stream, you will have something like this :
+\verbatim
+Time (s), Channel 1, Channel 2, ..., Channel n, Sampling Rate
+Time of measure 1, Measure 1 of channel 1, Measure 1 of channel 2, ..., Measure 1 of channel n, Value of the sampling rate
+Time of measure 2, Measure 2 of channel 1, Measure 2 of channel 2, ..., Measure 2 of channel n
+...
+Time of measure t, Measure t of channel 1, Measure t of channel 2, ..., Measure t of channel n
+\endverbatim
+
+For the Spectrum stream, you will have something like this :
+\verbatim
+Time (s), Channel 1, Channel 2, ..., Channel n, Min frequency band, Max frequency band
+Time of measure 1, Freq band 1 of m. 1 of chan 1, Freq band 1 of m. 1 of chan 2, ..., Freq band 1 of m. 1 of chan n, Value Min Frequency Band of band 1, Value Max Frequency Band of band 1
+Time of measure 1, Freq band 2 of m. 1 of chan 1, Freq band 2 of m. 1 of chan 2, ..., Freq band 2 of m. 1 of chan n, Value Min Frequency Band of band 2, Value Max Frequency Band of band 2
+...
+Time of measure 1, Freq band f of m. 1 of chan 1, Freq band f of m. 1 of chan 2, ..., Freq band f of m. 1 of chan n, Value Min Frequency Band of band f, Value Max Frequency Band of band f
+Time of measure 2, Freq band 1 of m. 2 of chan 1, Freq band 1 of m. 2 of chan 2, ..., Freq band 1 of m. 2 of chan n
+Time of measure 2, Freq band 2 of m. 2 of chan 1, Freq band 2 of m. 2 of chan 2, ..., Freq band 2 of m. 2 of chan n
+...
+Time of measure 2, Freq band f of m. 2 of chan 1, Freq band f of m. 2 of chan 2, ..., Freq band f of m. 2 of chan n
+...
+...
+...
+Time of measure t, Freq band 1 of m. t of chan 1, Freq band 1 of m. t of chan 2, ..., Freq band 1 of m. t of chan n
+Time of measure t, Freq band 2 of m. t of chan 1, Freq band 2 of m. t of chan 2, ..., Freq band 2 of m. t of chan n
+...
+Time of measure t, Freq band f of m. t of chan 1, Freq band f of m. t of chan 2, ..., Freq band f of m. t of chan n
+\endverbatim
+
+For the Stimulation stream, you will have something like this :
+\verbatim
+Time (s), Identifier, Duration
+Time of stim 1, Identifier of stim 1, Duration of stim 1
+Time of stim 2, Identifier of stim 2, Duration of stim 2
+...
+Time of stim n, Identifier of stim n, Duration of stim n
+\endverbatim
+ * |OVP_DocEnd_BoxAlgorithm_CSVFileReader_Miscellaneous|
+ */

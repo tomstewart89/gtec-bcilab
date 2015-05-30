@@ -1,0 +1,53 @@
+/**
+ * \page BoxAlgorithm_SharedMemoryWriter Shared Memory Writer
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_SharedMemoryWriter_Description|
+The box creates (via boost interprocess library) a shared memory and within it uniquely named variables for each input.
+When receiving chunks on its inputs, the box will write them to shared memory so that they can be read by another process. The box can write stimuli and streamed matrices, which are transformed in a format that can be written into shared memory. Based on the input types, a metainfo variable will be created in shared memory that will specify which variables have which type in shared memory. This way the client knows what it will be reading.
+
+ * |OVP_DocEnd_BoxAlgorithm_SharedMemoryWriter_Description|
+__________________________________________________________________
+
+Inputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_SharedMemoryWriter_Inputs|
+The supported input stream types are StreamedMatrix and Stimulations. The stream type of the input can be changed by the user and additional inputs can be added.
+ * |OVP_DocEnd_BoxAlgorithm_SharedMemoryWriter_Inputs|
+ *
+ * |OVP_DocBegin_BoxAlgorithm_SharedMemoryWriter_Input1|
+Default streamed matrix input.
+ * |OVP_DocEnd_BoxAlgorithm_SharedMemoryWriter_Input1|
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_SharedMemoryWriter_Settings|
+ * |OVP_DocEnd_BoxAlgorithm_SharedMemoryWriter_Settings|
+ *
+ * |OVP_DocBegin_BoxAlgorithm_SharedMemoryWriter_Setting1|
+Name of the shared memory to be created. Default to 'SharedMemory_P300Stimulator'
+ * |OVP_DocEnd_BoxAlgorithm_SharedMemoryWriter_Setting1|
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_SharedMemoryWriter_Examples|
+ * |OVP_DocEnd_BoxAlgorithm_SharedMemoryWriter_Examples|
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_SharedMemoryWriter_Miscellaneous|
+	You can see how to read the shared memory from another application in the CoAdapt p300 stimulator code. 
+
+	You can also use the test_sharedmemory application to test the shared memory.
+ * |OVP_DocEnd_BoxAlgorithm_SharedMemoryWriter_Miscellaneous|
+ */

@@ -1,0 +1,41 @@
+/**
+ * \page BoxAlgorithm_PlayerController Player Controller
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_PlayerController_Description|
+ * |OVP_DocEnd_BoxAlgorithm_PlayerController_Description|
+
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_PlayerController_Settings|
+ * |OVP_DocEnd_BoxAlgorithm_PlayerController_Settings|
+ *
+ * |OVP_DocBegin_BoxAlgorithm_PlayerController_Setting1|
+ * Input stimulation to react to
+ * |OVP_DocEnd_BoxAlgorithm_PlayerController_Setting1|
+ 
+ * |OVP_DocBegin_BoxAlgorithm_PlayerController_Setting2|
+ * Scenario player action to perform when stimulation is received. The options are 'forward', 'pause', 'play' and 'stop'.
+ * |OVP_DocEnd_BoxAlgorithm_PlayerController_Setting2|
+ 
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_PlayerController_Examples|
+ * |OVP_DocEnd_BoxAlgorithm_PlayerController_Examples|
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_PlayerController_Miscellaneous|
+ * |OVP_DocEnd_BoxAlgorithm_PlayerController_Miscellaneous|
+*/

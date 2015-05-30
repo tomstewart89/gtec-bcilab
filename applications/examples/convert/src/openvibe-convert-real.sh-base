@@ -1,0 +1,91 @@
+#!/bin/bash
+
+# This script is intended to be called via the launch script setting the environment properly
+
+LOCAL_BIN_PATH="@CMAKE_INSTALL_FULL_BINDIR@"
+if [ "$OV_PATH_BIN" != "" ]; then
+	LOCAL_BIN_PATH="$OV_PATH_BIN"
+fi
+LOCAL_LIB_PATH="@CMAKE_INSTALL_FULL_LIBDIR@"
+if [ "$OV_PATH_LIB" != "" ]; then
+	LOCAL_LIB_PATH="$OV_PATH_LIB"
+fi
+LOCAL_DATA_PATH="@CMAKE_INSTALL_FULL_DATADIR@/openvibe"
+if [ "$OV_PATH_DATA" != "" ]; then
+	LOCAL_DATA_PATH="$OV_PATH_DATA"
+fi
+
+FormatFrom=( "dat" "vhdr" "csv" "gdf" "ov" )
+FormatTo=( "csv" "edf" "gdf" "ov" )
+
+if [ $[$BASH_ARGC] != 2 ]; then
+  echo Usage: openvibe-convert [sourceFile] [destinationFile] 
+  echo
+  echo WARNING: This script is provided as an example only. There is no guarantee that the files
+  echo will be correctly converted or that they retain all information across the different formats. 
+  echo
+  echo Converts stream files from source to dest.
+  echo File formats are discovered from the filename extensions.
+  echo
+  echo Supported sources: ${FormatFrom[@]}
+  echo Supported destinations: ${FormatTo[@]}
+  exit 1
+fi
+
+
+#get the extension
+Extension="${1##*.}";
+DestinationExtension="${2##*.}";
+
+if [ $Extension == $1 ] ; then
+  echo No file extension found in filename "$1"
+  exit 1
+fi
+
+if [ $DestinationExtension == $2 ] ; then
+  echo No file extension found in filename "$2"
+  exit 1
+fi
+
+
+#check if the source format is valid
+From=false
+for x in "${FormatFrom[@]}"; do
+  if [ "$Extension" == "$x" ]; then
+    From=true
+  fi
+done
+
+if [ $From == false ]; then
+  echo "There is no reader box for the ."$Extension" format in openvibe"
+  exit 1
+fi
+
+#check if the destination format is valid
+To=false
+for x in "${FormatTo[@]}"; do
+  if [ "$DestinationExtension" == "$x" ]; then
+    To=true
+  fi
+done
+
+if [ $To == false ]; then
+  echo "There is no writer box for the ."$DestinationExtension" format in openvibe"
+  exit 1
+fi
+
+
+if [ $From ] && [ $To ]; then
+
+  ScenarioFolder="$LOCAL_DATA_PATH/scenarios/convert/"
+  ScenarioToOpen=$Extension"2"$DestinationExtension".xml"
+
+  #get the files path to the scenario
+  export OV_CONVERT_SRC=$1
+  export OV_CONVERT_DEST=$2
+
+  #launch designer
+  $LOCAL_BIN_PATH/openvibe-designer --no-gui --no-session-management --play-fast $ScenarioFolder$ScenarioToOpen
+
+fi
+

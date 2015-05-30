@@ -1,0 +1,67 @@
+/**
+ * \page BoxAlgorithm_ModifiableSettings Modifiable Settings
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Description|
+This box purpose is to test and demonstrate the modifiable settings feature. 
+It has a setting of each type and all are modifiable during scenario playback.
+Values are displayed in log (LogLevel_Info) every 5 seconds.
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Description|
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Settings|
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Settings|
+
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Setting1|
+An integer.
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Setting1|
+ 
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Setting2|
+A float.
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Setting2|
+
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Setting3|
+A boolean.
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Setting3|
+ 
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Setting4|
+A string.
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Setting4|
+
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Setting5|
+A filename.
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Setting5|
+
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Setting6|
+A script.
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Setting6|
+
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Setting7|
+A color.
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Setting7|
+
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Setting8|
+A color gradient.
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Setting8|
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Examples|
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Examples|
+
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_ModifiableSettings_Miscellaneous|
+ * |OVP_DocEnd_BoxAlgorithm_ModifiableSettings_Miscellaneous|
+ */

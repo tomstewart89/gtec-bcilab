@@ -1,0 +1,89 @@
+material ship_noir
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.3 0.3 0.3 1
+		}
+
+	}
+
+}
+
+material ship_blanc
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 1 1 1
+			diffuse 0.9 0.9 0.9 1
+		}
+
+	}
+
+}
+
+
+
+material ship_rouge
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 0.3 0.3 1
+		}
+
+	}
+
+}
+
+material ship_bleue
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.3 0.4 1 1
+		}
+
+	}
+
+}
+
+material ship_jaune
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 0.5 0.0 1
+		}
+
+	}
+
+}
+
+
+
+material ship_pare_brise
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.520884 0.641628 0.702 1
+		}
+
+	}
+
+}
+
+

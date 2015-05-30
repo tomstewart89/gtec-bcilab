@@ -1,0 +1,22 @@
+1. This package contains two wavelet libraries- libwavelet2d.so.1.0 (shared) and libwavelet2s.a (static) compiled essentially from the same source code. Source code is available in the 'src' folder.
+
+2. You may need to link to header files that are included with their resepctive libraries. They are also available in the 'src' folder.
+
+3. You may want to install shared library in one of your existing paths to make compilation easier. You can create sym links once inside the folder( say /usr/local/lib) by using following commands 
+
+ln -sf libwavelet2d.so.1.0 libwavelet2d.so
+ln -sf libwavelet2d.so.1.0 libwavelet2d.so.1
+ldconfig
+
+You will probably need superuser privileges to perform previous steps. If you don't have su privilege then you can move libwavelet2d.so.1.0 to your work folder or where your source code is, create sym links as before and then put your folder in the path during runtime.
+
+ln -sf libwavelet2d.so.1.0 libwavelet2d.so
+ln -sf libwavelet2d.so.1.0 libwavelet2d.so.1
+export LD_LIBRARY_PATH=.
+
+libwavelet2s.a : Working with static library is pretty straightforward. You will only need to include wavelet2s.h in your program and specify the library (-lwavelet2s flag) , include path (-I<path to wavelet2s.h> flag) and library path (-L<path to libwavelet2s.a> flag).
+
+
+4. These libraries are licensed under GNU-GPL v2.0 (or any later version). See COPYRIGHT and COPYING files for more information.
+
+5. These libraries statically link to FFTW-3.2.2 static library. More information, fftw libraries and associated files for this version are available at www.fftw.org. I have not modified fftw source codes in any way shape or form so you may want to download copies of source code and other files from the FFTW website itself if you are so inclined. However, you will find FFTW3 licensing and copyright information in the fftw3 folder. 

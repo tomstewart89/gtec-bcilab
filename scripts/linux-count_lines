@@ -1,0 +1,21 @@
+#!/bin/bash
+
+wc=`which wc`
+common_base_search=".. ( -name dist -o -name dependencies -o -name local-tmp ) -prune -o -print"
+
+echo collecting .dox files ...        && dox___files=`find $common_base_search | grep ".*\.dox$"`
+echo collecting .dox-part files ...   && doxp__files=`find $common_base_search | grep ".*\.dox-part$"`
+echo collecting .cmake files ...      && cmake_files=`find $common_base_search | grep ".*\.cmake$"`
+echo collecting .glade files ...      && glade_files=`find $common_base_search | grep ".*\.glade$"`
+
+echo counting lines in .dox .cmake .glade ...
+$wc -l $doxp__files $dox___files $cmake_files $glade_files
+
+echo collecting .h files ...     && h_____files=`find $common_base_search | grep ".*\.h$"`
+echo collecting .c files ...     && c_____files=`find $common_base_search | grep ".*\.c$"`
+echo collecting .hpp files ...   && hpp___files=`find $common_base_search | grep ".*\.hpp$"`
+echo collecting .cpp files ...   && cpp___files=`find $common_base_search | grep ".*\.cpp$"`
+echo collecting .inl files ...   && inl___files=`find $common_base_search | grep ".*\.inl$"`
+
+echo counting lines in .c .h .hpp .cpp .inl ...
+$wc -l $h_____files $c_____files $hpp___files $cpp___files $inl___files

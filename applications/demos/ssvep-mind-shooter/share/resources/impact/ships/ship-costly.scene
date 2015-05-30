@@ -1,0 +1,21 @@
+<scene formatVersion="1.0" upAxis="y" unitsPerMeter="100" unitType="centimeters" minOgreVersion="1.7" ogreMaxVersion="2.3.14" author="OgreMax Scene Exporter (www.ogremax.com)" application="Maya">
+    <environment>
+        <colourAmbient r="0.33" g="0.33" b="0.33" />
+        <colourBackground r="0" g="0" b="0" />
+        <clipping near="0" far="100000" />
+    </environment>
+    <nodes>
+        <node name="ship-costly_node">
+            <position x="0" y="0" z="0" />
+            <scale x="1" y="1" z="1" />
+            <rotation qx="0" qy="0" qz="0" qw="1" />
+            <entity name="v1_vaisseau2" castShadows="true" receiveShadows="true" meshFile="v1_vaisseau.mesh">
+                <subentities>
+                    <subentity index="0" materialName="ship_noir" />
+                    <subentity index="1" materialName="ship_rouge" />
+                    <subentity index="2" materialName="ship_pare_brise" />
+                </subentities>
+            </entity>
+        </node>
+    </nodes>
+</scene>

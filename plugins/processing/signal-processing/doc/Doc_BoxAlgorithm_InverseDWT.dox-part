@@ -1,0 +1,67 @@
+/**
+ * \page BoxAlgorithm_InverseDWT Inverse DWT
+__________________________________________________________________
+
+Detailed description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Description|
+ See Discrete Wavelet Transform box for more informations
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Description|
+__________________________________________________________________
+
+Inputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Inputs|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Inputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Input1|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Input1|
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Input2|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Input2|
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Input3|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Input3|
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Input4|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Input4|
+__________________________________________________________________
+
+Outputs description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Outputs|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Outputs|
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Output1|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Output1|
+__________________________________________________________________
+
+Settings description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Settings|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Settings|
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Setting1|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Setting1|
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Setting2|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Setting2|
+__________________________________________________________________
+
+Examples description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Examples|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Examples|
+__________________________________________________________________
+
+Miscellaneous description
+__________________________________________________________________
+
+ * |OVP_DocBegin_BoxAlgorithm_InverseDWT_Miscellaneous|
+ * |OVP_DocEnd_BoxAlgorithm_InverseDWT_Miscellaneous|
+ */

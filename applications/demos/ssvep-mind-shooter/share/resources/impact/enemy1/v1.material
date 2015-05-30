@@ -1,0 +1,48 @@
+
+material v1_noir
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.3 0.3 0.3 1
+		}
+
+	}
+
+}
+
+
+
+material v1_rouge
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.792 0.3 0.3 1
+		}
+
+	}
+
+}
+
+
+
+material v1_pare_brise
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.520884 0.641628 0.702 1
+		}
+
+	}
+
+}
+
+

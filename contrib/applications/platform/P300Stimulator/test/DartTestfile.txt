@@ -1,0 +1,51 @@
+FIND_PROGRAM(SIKULI NAMES sikuli-ide)
+IF(SIKULI)
+	IF(UNIX)
+		ADD_TEST(basic_external_stimulator "${SIKULI}" -t testBasicExternalStimulator.UNIX.sikuli)
+	ENDIF(UNIX)
+ENDIF(SIKULI)
+
+
+
+SET(TEST_NAME ExternalStimulatorReferenceComparator)
+#plan to add more reference data from different subject
+SET(REF P01S1)
+
+
+IF(WIN32)
+	SET(EXT cmd)
+	SET(OS_FLAGS "--no-pause")
+ELSE(WIN32)
+	SET(EXT sh)
+	SET(OS_FLAGS "")
+ENDIF(WIN32)
+
+
+#the goal here is to run an entire protocol
+#first we begin with the calibration phase
+#the calibration folder contains the 2 scenarios and the calibration data needed
+#and write the configuration files necessary for the other tests
+ADD_TEST(calibration_XDawn "$ENV{OV_BINARY_PATH}/openvibe-designer.${EXT}" ${OS_FLAGS} "--no-gui" "--play-fast" "./Calibration/p300-speller-2-train-xdawn.xml")
+ADD_TEST(calibration_classifier "$ENV{OV_BINARY_PATH}/openvibe-designer.${EXT}" ${OS_FLAGS} "--no-gui" "--play-fast" "./Calibration/p300-speller-3-train-classifier.xml")
+
+
+ADD_TEST(clean_resultBuffer "rm" "-f" "$ENV{OV_USERDATA}/xP300-resultStack.txt")
+#we use a python script to launch first the openvibe scenario then the external app, see the script itself for more details
+ADD_TEST(run_${TEST_NAME} "python" "launch.py" "../../../../../dist/")
+#if successful, a bunch of files have been generated and are to be compared with their reference
+
+## compare what has been displayed in the result zone
+ADD_TEST(${TEST_NAME}_resultBuffer "diff" "--strip-trailing-cr" "$ENV{OV_USERDATA}/xP300-resultStack.txt" "${REF}/resultStack.ref.txt")
+
+##compare timing (these tests do not work yet, there is to much variability between each run to establish a reliable reference) 
+#ADD_TEST(clean_drawTiming "rm" "-f" "$ENV{OV_USERDATA}/xP300-gl_draw_timing.txt")
+#ADD_TEST(clean_symbolUpdate "rm" "-f" "$ENV{OV_USERDATA}/xP300-symbol_update_timing.txt")
+#ADD_TEST(${TEST_NAME}_symbolUpdate "$ENV{OV_BINARY_PATH}/test_thresholdDataComparison.${EXT}" ${OS_FLAGS} "$ENV{OV_USERDATA}/xP300-symbol_update_timing.txt" "${REF}/symbol_update_timing.ref.txt" 0.1)
+#ADD_TEST(${TEST_NAME}_drawTiming "$ENV{OV_BINARY_PATH}/test_thresholdDataComparison.${EXT}" ${OS_FLAGS} "$ENV{OV_USERDATA}/xP300-gl_draw_timing.txt" "${REF}/gl_draw_timing.ref.txt" 0.1)
+
+## add some properties that help to debug
+SET_TESTS_PROPERTIES(run_${TEST_NAME} PROPERTIES ATTACHED_FILES_ON_FAIL "$$ENV{OV_USERDATA}/log/openvibe-designer.log"})
+SET_TESTS_PROPERTIES(compare_${TEST_NAME} PROPERTIES ATTACHED_FILES_ON_FAIL "${TEST_NAME}.csv"})
+SET_TESTS_PROPERTIES(compare_${TEST_NAME} PROPERTIES DEPENDS run_${TEST_NAME}})
+SET_TESTS_PROPERTIES(run_${TEST_NAME} PROPERTIES DEPENDS clean_${TEST_NAME}})
+

@@ -1,0 +1,97 @@
+<scene formatVersion="1.0" upAxis="y" unitsPerMeter="100" unitType="centimeters" minOgreVersion="1.7" ogreMaxVersion="2.3.14" author="OgreMax Scene Exporter (www.ogremax.com)" application="Maya">
+    <environment>
+        <colourAmbient r="0.33" g="0.33" b="0.33" />
+        <colourBackground r="0" g="0" b="0" />
+        <clipping near="0" far="100000" />
+    </environment>
+    <nodes>
+	<node name="battleship">
+		<node name="v4_vaisseau">
+		    <position x="0" y="0" z="0" />
+		    <scale x="1" y="1" z="1" />
+		    <rotation qx="0" qy="0" qz="0" qw="1" />
+		    <entity name="v4_vaisseau" castShadows="true" receiveShadows="true" meshFile="v4_vaisseau.mesh">
+		        <subentities>
+		            <subentity index="0" materialName="v4_texture_vaisseau" />
+		        </subentities>
+		    </entity>
+		</node>
+		<node name="shipCannon">
+			<node name="v4_ecran_avant1">
+			    <position x="0" y="0" z="0" />
+			    <scale x="1" y="1" z="1" />
+			    <rotation qx="0" qy="0" qz="0" qw="1" />
+			    <entity name="v4_ecran_avant1" castShadows="true" receiveShadows="true" meshFile="v4_ecran_avant1.mesh">
+				<subentities>
+				    <subentity index="0" materialName="v4_blanc1" />
+				</subentities>
+			    </entity>
+			</node>
+			<node name="v4_ecran_avant2">
+			    <position x="0" y="0" z="0" />
+			    <scale x="1" y="1" z="1" />
+			    <rotation qx="0" qy="0" qz="0" qw="1" />
+			    <entity name="v4_ecran_avant2" castShadows="true" receiveShadows="true" meshFile="v4_ecran_avant2.mesh">
+				<subentities>
+				    <subentity index="0" materialName="v4_blanc2" />
+				</subentities>
+			    </entity>
+			</node>
+		</node>
+		<node  name="shipLeftWing">
+			<node name="v4_aile_gauche1">
+			    <position x="0" y="0" z="0" />
+			    <scale x="1" y="1" z="1" />
+			    <rotation qx="0" qy="0" qz="0" qw="1" />
+			    <entity name="v4_aile_gauche1" castShadows="true" receiveShadows="true" meshFile="v4_aile_gauche1.mesh">
+				<subentities>
+				    <subentity index="0" materialName="v4_blanc1" />
+				</subentities>
+			    </entity>
+			</node>
+			<node name="v4_aile_gauche2">
+			    <position x="0" y="0" z="0" />
+			    <scale x="1" y="1" z="1" />
+			    <rotation qx="0" qy="0" qz="0" qw="1" />
+			    <entity name="v4_aile_gauche2" castShadows="true" receiveShadows="true" meshFile="v4_aile_gauche2.mesh">
+				<subentities>
+				    <subentity index="0" materialName="v4_blanc2" />
+				</subentities>
+			    </entity>
+			</node>
+		</node>
+		<node name="shipRightWing">
+			<node name="v4_aile_droite1">
+			    <position x="0" y="0" z="0" />
+			    <scale x="1" y="1" z="1" />
+			    <rotation qx="0" qy="0" qz="0" qw="1" />
+			    <entity name="v4_aile_droite1" castShadows="true" receiveShadows="true" meshFile="v4_aile_droite1.mesh">
+				<subentities>
+				    <subentity index="0" materialName="v4_blanc1" />
+				</subentities>
+			    </entity>
+			</node>
+			<node name="v4_aile_droite2">
+			    <position x="0" y="0" z="0" />
+			    <scale x="1" y="1" z="1" />
+			    <rotation qx="0" qy="0" qz="0" qw="1" />
+			    <entity name="v4_aile_droite2" castShadows="true" receiveShadows="true" meshFile="v4_aile_droite2.mesh">
+				<subentities>
+				    <subentity index="0" materialName="v4_blanc2" />
+				</subentities>
+			    </entity>
+			</node>
+		</node>
+		<node name="v4_viseur">
+		    <position x="0" y="0" z="0" />
+		    <scale x="1" y="1" z="1" />
+		    <rotation qx="0" qy="0" qz="0" qw="1" />
+		    <entity name="v4_viseur" castShadows="true" receiveShadows="true" meshFile="v4_viseur.mesh">
+		        <subentities>
+		            <subentity index="0" materialName="v4_viseur1" />
+		        </subentities>
+		    </entity>
+		</node>
+	</node>
+    </nodes>
+</scene>
