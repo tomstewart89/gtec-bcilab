@@ -1,0 +1,88 @@
+The MIT License (MIT)
+
+Copyright (c) 2015 Thomas Stewart
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Acknowledgements:
+
+This driver was written by Tom Stewart under the supervision of 
+Dr. Tomasz M. Rutkowski in the University of Tsukuba's BCI Laboratory 
+http://bci-lab.info/
+
+Installation:
+
+The driver was developed using gtec's Linux C API 1.14.02. For it build properly,
+the install.sh supplied with the gtec API needs to have been run which should
+have created the following files:
+
+/usr/lib/libgusbampapiso.so.1.14.02
+/usr/include/gAPI.h
+/etc/gtec/filter_files/DSPfilter.bin
+/etc/gtec/filter_files/DSPNotchfilter.bin
+
+To access the USB without being root, you'll need to add yourself to the
+plugdev group and write a udev rule. 
+
+To do that, first check if there is a plugdev group:
+
+$ groups
+
+If there isn't already a plugdev group, then add it using:
+
+$ sudo groupadd plugdev
+
+Now execute the following:
+
+$ sudo usermod -a -G plugdev <your-username>
+
+If you're not sure what your username is, check it with:
+
+$ whoami
+
+Next create a file named /etc/udev/rules.d/10-gusbamp-usb.rules
+
+$ sudo touch /etc/udev/rules.d/10-gusbamp-usb.rules
+
+And open it with nano editor
+
+$ sudo nano /etc/udev/rules.d/10-gusbamp-usb.rules
+
+Now paste the following line into the editor:
+
+ATTRS{idProduct}=="0001", ATTRS{idVendor}=="153c", MODE="666", GROUP="plugdev"
+
+The values for idProduct and idVendor should match the ones that show up just 
+after you've plugged in the amplifier and executed:
+
+$ dmesg
+
+Lastly, be sure to log out and back in.
+
+Useage:
+
+The driver gives access to everything in the API with the exception of the channel
+calibration and asynchronous configuration for digital outputs.
+
+To run multiple gUSBAmps in parallel, use multiple instances of the acquisition server
+and configure each instance as Master / Slave according to gtec's documentation. When
+starting the acquisition, first connect to all the devices then press play on each device 
+starting with the master.
+
+
